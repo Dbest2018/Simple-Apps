@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <!-- text layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/text_shown"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2" />
+    </LinearLayout>
+
+    <!-- button layout-->
+    <GridLayout
+        android:id="@+id/grid_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:orientation="horizontal"
+        android:columnCount="4"
+        android:rowCount="5"
+        android:padding="10dp">
+
+        <!--row one, column one and two-->
+        <Button
+            android:id="@+id/clear_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnSpan="2"
+            android:layout_columnWeight="1"
+            android:text="@string/clear_button"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:onClick="getOperator"/>
+
+        <!--row one, column three and four-->
+        <Button
+            android:id="@+id/backspace"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_columnSpan="2"
+            android:text="@string/backspace"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:onClick="getOperator"/>
+
+        <!--row two, column one-->
+        <Button
+            android:id="@+id/number_seven"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:text="@string/number_seven"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:onClick="getNumber"/>
+
+        <!--row two, column two-->
+        <Button
+            android:id="@+id/number_eight"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:text="@string/number_eight"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:onClick="getNumber"/>
+
+        <!--row two, column three-->
+        <Button
+            android:id="@+id/number_nine"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:text="@string/number_nine"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:onClick="getNumber"/>
+
+        <!--row two, column four-->
+        <Button
+            android:id="@+id/subtract_button"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            android:text="@string/subtract_button"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:onClick="getOperator"/>
+
+        <!--row three, column one-->
+        <Button
+            android:id="@+id/number_four"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:text="@string/number_four"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:onClick="getNumber"/>
+
+        <!--row three, column two-->
+        <Button
+            android:id="@+id/number_five"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:text="@string/number_five"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:onClick="getNumber"/>
+
+        <!--row three, column three-->
+        <Button
+            android:id="@+id/number_six"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:text="@string/number_six"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:onClick="getNumber"/>
+
+        <!--row three, column four-->
+        <Button
+            android:id="@+id/division_button"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            android:text="@string/division_button"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:onClick="getOperator"/>
+
+        <!--row four, column one-->
+        <Button
+            android:id="@+id/number_one"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:text="@string/number_one"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:onClick="getNumber"/>
+
+        <!--row four, column two-->
+        <Button
+            android:id="@+id/number_two"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:text="@string/number_two"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:onClick="getNumber"/>
+
+        <!--row four, column three-->
+        <Button
+            android:id="@+id/number_three"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:text="@string/number_three"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:onClick="getNumber"/>
+
+        <!--row four, column four-->
+        <Button
+            android:id="@+id/multiply_button"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            android:text="@string/multiply_button"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:onClick="getOperator"/>
+
+        <!--row five, column one-->
+        <Button
+            android:id="@+id/number_zero"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:text="@string/number_zero"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:onClick="getNumber"/>
+
+        <!--row five, column two-->
+        <Button
+            android:id="@+id/decimal_point"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:text="@string/decimal_point"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:onClick="getOperator"/>
+
+        <!--row five, column three-->
+        <Button
+            android:id="@+id/equal_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:text="@string/equal_sign"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:onClick="getOperator"/>
+
+        <!--row five, column four-->
+        <Button
+            android:id="@+id/add_button"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            android:text="@string/add_button"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:onClick="getOperator"/>
+    </GridLayout>
+
+</LinearLayout>
